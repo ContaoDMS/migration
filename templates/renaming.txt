@@ -1,0 +1,14 @@
+How to rename templates
+-----------------------
+
+- mod_dokmansystem_ablehnung                              ==> mod_dms_management_access_denied
+- mod_dokmansystem_dokumentupload_auswahl                 ==> mod_dms_management_upload_select_file
+- mod_dokmansystem_dokumentupload_eigenschaften           ==> mod_dms_management_upload_enter_properties
+- mod_dokmansystem_dokumentupload_verarbeiten             ==> mod_dms_management_upload_processing
+- mod_dokmansystem_dokumentverwaltung_auswahl             ==> mod_dms_management_document_select
+- mod_dokmansystem_dokumentverwaltung_editieren_ausfuehren==> mod_dms_management_document_edit_processing
+- mod_dokmansystem_dokumentverwaltung_editieren_eingabe   ==> mod_dms_management_document_edit
+- mod_dokmansystem_dokumentverwaltung_loeschen_bestaetigen==> mod_dms_management_document_delete_processing
+- mod_dokmansystem_dokumentverwaltung_loeschen_nachfrage  ==> mod_dms_management_document_delete
+- mod_dokmansystem_kategorieanzeige                       ==> mod_dms_listing
+- mod_dokmansystem_kategorieauswahl                       ==> mod_dms_management_categories
