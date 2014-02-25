@@ -30,11 +30,11 @@ ALTER TABLE `tl_dms_access_rights` DROP `pid`;
 ALTER TABLE `tl_dms_access_rights` CHANGE `zr_kategorieid` `pid` int(10) unsigned NOT NULL default '0';
 ALTER TABLE `tl_dms_access_rights` ADD KEY (`pid`);
 ALTER TABLE `tl_dms_access_rights` CHANGE `zr_mitgliedergruppenid` `member_group` int(10) unsigned NOT NULL default '0';
-ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_lesen` `read` char(1) NOT NULL default '';
-ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_upload` `upload` char(1) NOT NULL default '';
-ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_loeschen` `delete` char(1) NOT NULL default '';
-ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_editieren` `edit` char(1) NOT NULL default '';
-ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_veroeffentlichen` `publish` char(1) NOT NULL default '';
+ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_lesen` `right_read` char(1) NOT NULL default '';
+ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_upload` `right_upload` char(1) NOT NULL default '';
+ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_loeschen` `right_delete` char(1) NOT NULL default '';
+ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_editieren` `right_edit` char(1) NOT NULL default '';
+ALTER TABLE `tl_dms_access_rights` CHANGE `zr_dokument_veroeffentlichen` `right_publish` char(1) NOT NULL default '';
 
 -- --------------------------------------------------------
 
