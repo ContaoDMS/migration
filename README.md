@@ -19,9 +19,9 @@ Database
 --------
 
 **! DO NOT UPDATE DATABASE VIA CONTAO !**
-- Excute each file in folder `sql` in the given order (e.g. via PhpMyAdmin).
-...
-- Now, update the database via backend
+- Excute each file `1_migrate_tables.sql` from folder `sql` in the given order (e.g. via PhpMyAdmin).
+- **! Now, update the database via backend !**
+- Excute the remaining files from folder `sql` in the given order starting with `2_migrate_sorting.sql` (e.g. via PhpMyAdmin).
 
 Templates
 ---------
@@ -31,7 +31,7 @@ See `templates/renaming.txt` to check the new names of the templates.
 Files
 -----
 
-- manually rename all files: add '_0' to version string (will be the patch number)
+- manually rename all files: add `_0` to version string (will be the patch number)
 OR
 - use `files/rename.php` to rename all files automatically via script
  - copy `files/rename.php` to DokManSystem files directory

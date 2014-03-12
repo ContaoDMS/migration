@@ -13,7 +13,7 @@ UPDATE tl_dms_categories cat,
  (SELECT @rownum := 0) r,
  (SELECT * FROM tl_dms_categories ORDER BY pid, name) t) tsub
 SET cat.sorting = (tsub.ROWNUM *64)
-WHERE cat.id = tsub.ID
+WHERE cat.id = tsub.ID;
 
 -- ------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ UPDATE tl_dms_access_rights acr,
  (SELECT @rownum := 0) r,
  (SELECT tl_dms_access_rights.* FROM tl_dms_access_rights JOIN tl_member_group ON tl_dms_access_rights.member_group = tl_member_group.id ORDER BY tl_dms_access_rights.pid, tl_member_group.name) t) tsub
 SET acr.sorting = (tsub.ROWNUM *64)
-WHERE acr.id = tsub.ID
+WHERE acr.id = tsub.ID;
 
 -- ------------------------------------------------------------------
 
@@ -33,4 +33,4 @@ UPDATE tl_dms_documents doc,
  (SELECT @rownum := 0) r,
  (SELECT * FROM tl_dms_documents ORDER BY pid, name, version_major, version_minor, version_patch) t) tsub
 SET doc.sorting = (tsub.ROWNUM *64)
-WHERE doc.id = tsub.ID
+WHERE doc.id = tsub.ID;
