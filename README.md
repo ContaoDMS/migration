@@ -1,7 +1,7 @@
 DocumentManagementSystem - Migration
 ====================================
 
-Some helping files and instructions to migrate the old [DokManSystem] to the new [DocumentManagementSystem](https://github.com/cliffparnitzky/DocumentManagementSystem).
+Some helping files and instructions to migrate the old [DokManSystem] to the new [[DocumentManagementSystem]](https://github.com/cliffparnitzky/DocumentManagementSystem).
 
 Please read the complete guide first, before starting migration. Executing the steps in the given order is very important.
 
