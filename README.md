@@ -1,12 +1,22 @@
 DocumentManagementSystem - Migration
 ====================================
 
-Some helping files to migrate the old [DokManSystem] to the new [DocumentManagementSystem].
+Some helping files and instructions to migrate the old [DokManSystem] to the new [DocumentManagementSystem].
+
+Please read the complete guide first, before starting migration. Executing the steps in the given order is very important.
+
+Extension update
+----------------
+
+- backup your file system and database and custom templates
+- be careful when updating the extension, because it may happen that the DMS_DIRECTORY should be deleted (copy it before to another name)
+
+**! DO NOT UPDATE DATABASE VIA CONTAO NOW !**
 
 Database
----
+--------
 
-! DO NOT UPDATE DATABASE VIA CONTAO !
+**! DO NOT UPDATE DATABASE VIA CONTAO !**
 - Excute each file in folder `sql` in the given order (e.g. via PhpMyAdmin).
 ...
 - Now, update the database via backend
@@ -14,12 +24,17 @@ Database
 Templates
 ---------
 
-Use `templates/renaming.txt` to rename yout templates.
+See `templates/renaming.txt` to check the new names of the templates.
 
 Files
 -----
 
-- rename all files: add '_0' to version string (will be the patch number)
+- manually rename all files: add '_0' to version string (will be the patch number)
+OR
+- use `files/rename.php` to rename all files automatically via script
+ - copy `files/rename.php` to DokManSystem files directory
+ - execute it **ONCE** in your browser (http://DOMAIN.TLD/tl_files/DMS_DIRECTORY/rename.php)
+ - maybe `.htaccess` must be deactivated temporarily
 
 Contao
 ------
