@@ -1,7 +1,7 @@
 ContaoDMS - Migration
 =====================
 
-Some helping files for migrating existing data from old [DokManSystem] the [[Contao DMS]](https://github.com/ContaoDMS/core).
+Some helping files for migrating existing data from old [DokManSystem] the [[Contao DMS]](https://github.com/ContaoDMS/dms).
 
 Please read the complete guide first, before starting migration. Executing the steps in the given order is very important.
 
