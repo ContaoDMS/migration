@@ -1,17 +1,18 @@
-DocumentManagementSystem - Migration
-====================================
+ContaoDMS - Migration
+=====================
 
-Some helping files and instructions to migrate the old [DokManSystem] to the new [[DocumentManagementSystem]](https://github.com/cliffparnitzky/DocumentManagementSystem).
+Some helping files for migrating existing data from old [DokManSystem] the [[Contao DMS]](https://github.com/ContaoDMS/core).
 
 Please read the complete guide first, before starting migration. Executing the steps in the given order is very important.
 
-In case there are issues, please use the [tracker](https://github.com/cliffparnitzky/DocumentManagementSystem-Migration/issues).
+In case there are issues, please use the [tracker](https://github.com/ContaoDMS/migration/issues).
+
 
 Extension update
 ----------------
 
 - backup your file system and database and custom templates
-- be careful when updating the extension, because it may happen that the DMS_DIRECTORY should be deleted (copy it before to another name)
+- be careful when updating the extension, because it may happen that the DMS_DIRECTORY will be deleted (copy it before to another name)
 
 **! DO NOT UPDATE DATABASE VIA CONTAO NOW !**
 
@@ -35,7 +36,7 @@ Files
 OR
 - use `files/rename.php` to rename all files automatically via script
  - copy `files/rename.php` to DokManSystem files directory
- - execute it **ONCE** in your browser (http://DOMAIN.TLD/tl_files/DMS_DIRECTORY/rename.php)
+ - execute it **ONCE** in your browser (http://domain.tld/tl_files/DMS_DIRECTORY/rename.php)
  - maybe `.htaccess` must be deactivated temporarily
 
 Contao
