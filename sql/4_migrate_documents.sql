@@ -7,5 +7,5 @@
 -- *                                                        *
 -- **********************************************************
 
-UPDATE tl_dms_documents SET file_source = SUBSTRING(file_source, 1, (LENGTH(file_source) - LOCATE(".", REVERSE(file_source))));
+UPDATE tl_dms_documents SET data_file_name = SUBSTRING(data_file_name, 1, (LENGTH(data_file_name) - LOCATE(".", REVERSE(data_file_name))));
 UPDATE tl_dms_documents SET keywords = REPLACE(keywords, ",", " ");
