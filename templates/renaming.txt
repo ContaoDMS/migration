@@ -8,7 +8,7 @@ How to rename templates
 - mod_dokmansystem_dokumentverwaltung_auswahl             ==> mod_dms_mgmt_manage_document_select
 - mod_dokmansystem_dokumentverwaltung_editieren_ausfuehren==> mod_dms_mgmt_manage_document_edit_processing
 - mod_dokmansystem_dokumentverwaltung_editieren_eingabe   ==> mod_dms_mgmt_manage_document_edit
-- mod_dokmansystem_dokumentverwaltung_loeschen_bestaetigen==> mod_dms_mgmt_manage_document_delete_processing
-- mod_dokmansystem_dokumentverwaltung_loeschen_nachfrage  ==> mod_dms_mgmt_manage_document_delete
+- mod_dokmansystem_dokumentverwaltung_loeschen_bestaetigen==> -
+- mod_dokmansystem_dokumentverwaltung_loeschen_nachfrage  ==> -
 - mod_dokmansystem_kategorieanzeige                       ==> mod_dms_listing
 - mod_dokmansystem_kategorieauswahl                       ==> mod_dms_management
