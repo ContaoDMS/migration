@@ -10,6 +10,7 @@
 	.red {color: #c10000;}
 	.green {color: #04b404;}
 	.blue {color: #2e9afe;}
+	.orange {color: #ffa500;}
 	span {display: inline-block; width: 40%;}
 	span.to:before {content: ">>>"; padding-right: 20px; color: #000000;}
 	span.to .new {font-weight: bold; display: inline; color: #088a29;}
@@ -19,27 +20,35 @@
 <body>
 <?php if ($_POST['FORM_SUBMIT'] == 'doRename') : ?>
 	<?php
-		$ignore = array('rename.php', '.htacess');
+		$ignore = array('rename.php', '.htaccess');
 		$path = $_POST['path'];
 		$append = $_POST['append'];
+		$dryrun = $_POST['dryrun'];
 		if (is_dir($path))
 		{
 			$dir = @opendir($path);
 			echo "<h1 class=\"green\">Renaming files</h1>";
+			if ($dryrun)
+			{
+				echo "<div class=\"orange\">The files are not really renamed. This is a dry run.</div>";
+			}
 			echo "<ul id=\"files\">";
 			$counter = 0;
 			while(false !== ($file = readdir($dir)))
 			{
-					if(!is_dir("$path/$file") && !in_array($file, $ignore))
-					{
-							$dotPos = strrpos($file, ".");
-							$fileName = substr($file, 0, $dotPos);
-							$fileType = substr($file, $dotPos + 1);
-							$newFile = $fileName . $append . "." . $fileType;
-							echo "<li><span class=\"blue from\">$file</span><span class=\"green to\">$fileName<span class=\"new\">$append</span>.$fileType</span></li>";
+				if(!is_dir("$path/$file") && !in_array($file, $ignore))
+				{
+						$dotPos = strrpos($file, ".");
+						$fileName = substr($file, 0, $dotPos);
+						$fileType = substr($file, $dotPos + 1);
+						$newFile = $fileName . $append . "." . $fileType;
+						echo "<li><span class=\"blue from\">$file</span><span class=\"green to\">$fileName<span class=\"new\">$append</span>.$fileType</span></li>";
+						if (!$dryrun)
+						{
 							rename($path."/".$file, $path."/".$newFile);
-							$counter++;
-					}
+						}
+						$counter++;
+				}
 			}
 			echo "</ul>";
 			echo "<div>";
@@ -69,6 +78,9 @@
 		<br/>
 		<label for="path">Append:</label>
 		<input type="text" id="append" name="append" value="_0" required="true" />
+		<br/>
+		<label for="dryrun">Dry run:</label>
+		<input type="checkbox" id="dryrun" name="dryrun" value="true" checked="checked">
 		<br/>
 		<input type="submit" id="button" value="Start renaming" />
 	</form>
